@@ -1,0 +1,23 @@
+retrieve mug, teabag, milk, teaspoon, kettle
+fill kettle (350ml)
+place teabag in mug
+fill mug (kettle), (milk(finish cup))
+use teaspoon stir(5secs)
+wait 1 minute
+use teaspoon remove teabag
+place teabag in bin
+
+pickup = pick up card from table
+categoryCard = hearts, diamonds, spades, clubs, kings, queens, jack, ace
+categoryArray = Hearts, 1 - 8 etc.
+number = number on card
+compare = compare number & category to cards already placed, if same place to side
+
+totalCards = 52
+if totalCards < 52
+  pickup card (+1 along row, left to right)
+  check card (number, category)
+  place card in categoryArray
+
+
+else

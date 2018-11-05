@@ -8,10 +8,12 @@
 
 //Initialization function
 let size = 50;
+let size2 = 25;
+
 
 function setup() {
-  createCanvas(600,500);
-  noLoop();
+  createCanvas(501,501);
+  frameRate(3);
 }
 
 function draw() {
@@ -19,6 +21,11 @@ function draw() {
   for (let y = 0; y < 10; y++){
   for (let x = 0; x < 10; x++) {
   rect(x*size, y*size, size, size);
+
+  fill(random(255), random(255), random(255));
+  rect((x*size)+12, (y*size)+12, size2, size2);
+    }
   }
-}
+
+
 }

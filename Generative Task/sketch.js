@@ -14,24 +14,29 @@ function setup() {
   //View > Developer > Developer Tools > Console
   console.log("Initialization: OK")
   canvas =  createCanvas(windowWidth,windowHeight); //Sets canvas size to size of user browser
-  frameRate(30);
-  noStroke();
+  frameRate(5);
+
 }
 
 function draw() {
 customShape();
-scale = random(400); //
+scale = random(200,400); //
 positionWide = random(windowWidth); // Variable allows shape to remain consistent
 positionUp = random(windowHeight);
 }
 
-function customShape() {
-  fill(random(255),0,random(255), random(20,150));
 
+//Function generates the shapes for eye
+function customShape() {
+  fill(255,random(255),random(150,255), random(75,150));
   ellipse(positionWide, positionUp, scale, scale);
   ellipse(positionWide, positionUp, scale-40, scale/2); // Dividing keeps the scale
-  fill(random(255),random(255),random(255));
+  fill(255,random(255),random(150,255), random(75,150));
   ellipse(positionWide, positionUp, scale-60, scale/4);
-  fill(random(255),random(255),random(255));
-  ellipse(positionWide, positionUp, scale-80, scale/6); // Randomises to edge of window
+  fill(255,255,255, random(75,150));
+  ellipse(positionWide, positionUp, scale-80, scale/6); // White of the eye
+  fill(random(255),random(255),random(255), random(75,150));
+  // Pupil of the eye, randomises horizontal position between the parameters set
+  ellipse(positionWide-random(-42,42), positionUp, scale/3, scale/10);
+
 }

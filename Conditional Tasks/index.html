@@ -5,6 +5,8 @@
 <p id="demo">Display the result here.</p>
 <p id="demo2">Display the other result here.</p>
 <p id="demo3">Am I of legal drinking age?! Check now!!!!</p>
+<br>
+<p>Input your age here. Age check function</p>
 <input type="number" name="age" id="input">
 
 <script>
@@ -21,9 +23,9 @@ document.getElementById("demo2").innerHTML = "Woo, I'm a genius!";
 
 //Third conditional task, want to change to an age check function, only checks on reload atm
 if (document.getElementById("input").value > 18) {
-  document.getElementById("demo3").innerHTML = "Woo,";
+  document.getElementById("demo3").innerHTML = "Woo, you're above 18";
 } else {
-  document.getElementById("demo3").innerHTML = "Woo, !";
+  document.getElementById("demo3").innerHTML = "Woo, you're not quite 18";
 }
 
 </script>

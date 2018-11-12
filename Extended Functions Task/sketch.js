@@ -16,7 +16,7 @@ function setup() {
 }
 
 
-//Extendeded Functions Task 1, work out the smallest number in a function
+//Extended Functions Task 1, work out the smallest number in a function
 var num = min(5,10);
 
 function min(a,b) {

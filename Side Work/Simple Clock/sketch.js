@@ -42,6 +42,6 @@ function draw() {
 
 
 
-  //Attempted to create a counter for the amount of times the circle was completed. 
+  //Attempted to create a counter for the amount of times the circle was completed.
   //console.log(sc);
 }

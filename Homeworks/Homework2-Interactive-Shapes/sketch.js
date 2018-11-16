@@ -4,7 +4,8 @@ var scale;
 var positionWide;
 var positionUp;
 var shapeFunction;
-var state;
+var state = 0;
+
 //DAT405 / GAD405
 //00_Template
 //The purpose of this sketch is to provide a basic template
@@ -25,11 +26,17 @@ function draw() {
 if (state==1) {customShape();}
  else if (state==2) {customShape1();}
  else if (state==3) {customShape2();}
+ else if (state==0) {drawText();}
 scale = random(200,400); //
 positionWide = random(windowWidth); // Variable allows shape to remain consistent
 positionUp = random(windowHeight);
 }
 
+
+function drawText() {
+  background('#000000');
+  text("Hello World", height/2, width/2);
+}
 
 //Sets variabls for keys pressed, ensures the clear function does not loop alongised
 function keyPressed() {

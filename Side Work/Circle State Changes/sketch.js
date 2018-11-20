@@ -17,7 +17,7 @@ var circleColour = '#DDDDDD';
 //Initialization function
 function setup() {
   //Set the size of rendering window - pixels
-  createCanvas(500, 500);
+  createCanvas(500, 800);
 }
 
 //Rendering function
@@ -31,16 +31,16 @@ function draw() {
 }
 
 function sunmoon() {
-  //Increments angle, making the circle move. 
-  angle+=0.1;
+  //Increments angle, making the circle move.
+  angle+=0.03;
   //Creates angles from integer value (var angle).
   var cosX = cos(angle);
   var sinY = sin(angle);
   //Maps the range created by Sin and Cos and coverts them into X & Y coordinates.
-  let x = map(cosX, -1, 1, 0, width-50);
-  let y = map(sinY, -1, 1, 0, height-50);
+  let x = map(cosX, -1, 1, 10, width-50);
+  let y = map(sinY, -1, 1, 10, height-70);
   fill(circleColour);
-  ellipse(20+x, 20+y, 70, 70);
+  ellipse(20+x, 20+y, 50, 50);
 
 
   //Checks position  of ball relative to top half or bottom half of the page. Changes state

@@ -37,9 +37,13 @@ function sunmoon() {
   var cosX = cos(angle);
   var sinY = sin(angle);
   //Maps the range created by Sin and Cos and coverts them into X & Y coordinates.
+  //(maps x & y to circle shape)
   let x = map(cosX, -1, 1, 10, width-50);
   let y = map(sinY, -1, 1, 10, height-70);
+  //Fills circle with colour defined by if statement below.
   fill(circleColour);
+  //Positions ellipse according to values generated above.
+  //Added twenty to each value to position circle on canvas.
   ellipse(20+x, 20+y, 50, 50);
 
 

@@ -20,17 +20,24 @@ function draw() {
 background(100);
 var xVar = start;
 
+//Shape function allows complex shapes using vertexs, allows graph to be generated
 beginShape();
 for (var x = 0; x < width; x++) {
+  //Maps value of perlin noise to height of page, generating Y value.
   var y = map(noise(xVar),0,1,0,height);
   var colour = map(y, 0, 800, 0, 255);
+  //Fill creates cool animation, attempts to fill according to median value
   fill(colour);
   strokeWeight(3);
+  //Vertex, X value increases until width, Y value is mapped noise, creating
+  //graph effect.
   vertex (x, y);
+  //Sets and increments noise graph values.
   xVar += 0.01;
 }
 
 endShape();
+//Generates noise values outside of shape loop.
 start += 0.01;
 
 

@@ -29,16 +29,18 @@ function draw() {
   scale = 200;
   background(255, 255, 0);
 
+  //Calls custom shape to be generated.
   customShape();
 
   //Maps noise values to circle width parameter, circle's X position moves
-  //with this value.
+  //with this value. +50 -50 keeps eye movement inside previous shapes size.
     var x = map(noise(xOff),0,1,positionX-50,positionX+50);
     ellipse(x,positionY,40,40);
     xOff+=xIncrement;
 }
 
 function customShape() {
+  //Generates random colours for circles. Random opacity parameters also set.
   fill(255,random(255),random(150,255), random(75,150));
   ellipse(positionX, positionY, scale, scale);
   ellipse(positionX, positionY, scale-40, scale/2); // Dividing keeps the scale

@@ -21,7 +21,7 @@ function setup() {
   //Preferences for the text (size, and alignment)
 
 
-
+//Loop generates 20 circles along x axis.
   for (var i=0; i < 20; i++) {
     ellipse(0, 150, 30, 30);
     translate(20,0);
@@ -37,7 +37,8 @@ function setup() {
   ellipse(120, 200, 30, 30);
 
 
-  translate(160, 300);
+  translate(160, 300); //Moves shape generated below to bottom right of screen
+  //Loop generates 150 circles rotated around into a circle
   for (var i=0; i < 150; i++) {
     ellipse(0, 20, 30, 90);
     rotate(PI/90);

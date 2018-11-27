@@ -7,6 +7,7 @@
 //the frame rate of the rendering system, and use text to
 //display the frame count and rate on screen
 var xOff = 0;
+var yOff = 0.0;
 //Initialization function
 function setup() {
   //Set the size of rendering window - pixels
@@ -14,8 +15,8 @@ function setup() {
 
   //Set up the frame rate (frames per second)
   //Default is 60 fps
-  frameRate(3);
-  background(60);
+  frameRate(5);
+
 }
 
 //Rendering function
@@ -25,6 +26,9 @@ function draw() {
   translate(0,200);
 //Calls function that generates landscape.
   landscape();
+  //Increments inside draw function to change values of noise, in turn
+  //generating new shapes by doing so. 
+  xOff += 0.05;
 
 }
 
@@ -33,7 +37,7 @@ function landscape() {
   beginShape();
 // Maps perlin noise values to Y coordinates.
     for (var x = 0; x <= width; x+=10) {
-      var y = map(noise(xOff),0,1,0,height);
+      var y = map(noise(xOff,yOff),0,1,0,height);
 
 //Finds shapes generated below a point, creating a sense of distance
 //between landscape colours.

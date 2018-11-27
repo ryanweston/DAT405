@@ -12,7 +12,6 @@ function setup() {
   //View > Developer > Developer Tools > Console
   console.log("Initialization: OK")
   createCanvas(800,600);
-
 }
 
 //Rendering function
@@ -33,10 +32,10 @@ function draw() {
     speedY = speedY * -1;
   }
 
-  //Circle styling and draws circle. 
+  //Circle styling and draws circle.
   stroke('#000000');
   strokeWeight(3);
   noFill();
   ellipse(x, y,radius*2,radius*2);
-  console.log(x);
+  //console.log(x);
 }
